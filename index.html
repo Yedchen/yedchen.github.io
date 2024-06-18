@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yedchen's Web</title>
+    <link rel="shortcut icon" href="icon/Ceylan.png" >
  <style>
-/* 这个文件中专门写和博客列表页相关的样式 */
 .blog{
     width: 100%;
-    /* 高度如果不设置, 就取决于里面的内容高度的综合 */
     padding: 20px;
 }
 
@@ -31,35 +30,29 @@
 }
 
 .blog a{
-    /* 设置成块级元素，方便设置尺寸和边距 */
     display: block;
     width: 140px;
     height: 40px;
     margin: 10px auto;
     border: 2px black solid;
-
     color: black;
     line-height: 40px;
     text-align: center;
     text-decoration: none;
-
-    /* 过渡效果 */
     transition: all 0.5s;
 }
 
-/* 伪类选择器 表示光标移动到元素上的效果 */
 .blog a:hover{
     background: rgb(97, 84, 84);
     color: #fff;
 }
 
-/* 去掉浏览器页面默认样式 */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* 给整个页面加上背景图 */
+
 html, body{
     height: 100%;
 }
@@ -74,13 +67,10 @@ body{
 
 .nav{
     width: 100%;
-      /* 一般来说这里的详细尺寸, 都是设计稿中已经标注清楚的了. 此处没设计稿, 具体的尺寸取决于我自己的喜好 */
     height: 80px;
     background-color: rgba(0,0,0,1);
     color: white;
-     /* 导航栏内部的内容, 都是一行排列的. 就需要使用 flex 布局来进行操作 */
     display: flex;
-      /* 实现子元素垂直居中效果 */
     align-items: center;
 }
 
@@ -88,18 +78,15 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-
     margin-left: 30px;
     margin-right: 10px;
 }
 
 .nav .spacer{
-      /* 相对于父元素的宽度, 如果父元素(.nav) 宽度是 1000px, 此时 .spacer 就是 700px */
     width: 70%;
 }
 
 .nav .spacerlast{
-      /* 相对于父元素的宽度, 如果父元素(.nav) 宽度是 1000px, 此时 .spacer 就是 700px */
     width: 46%;
 }
 
@@ -109,13 +96,9 @@ body{
     padding: 0 10px
 }
 
-/* 版心相关样式 */
 .container{
-    /* 当前版心并不是和窗口一样宽的 */
     width: 1600px;
     height: calc(100% - 50px);
-
-    /* 水平居中 */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -133,17 +116,12 @@ body{
     background-color: rgba(169,169,169,0.97); 
     border-radius: 10px;
 
-    overflow: auto;（实现多出来的正文部分显示在一页当中，给元素加滚动条）
-} 
+    overflow: auto;
+}
 
-
-/* 接下来实现card部分样式 */
 .card{
     background-color: rgba(90,90,90,0.98);
     border-radius: 10px;
-
-    /* 通过这里的内边距，就可以头像居中 */
-    /* 这里设置的30px，意思就是四个方向都是30px */
     padding: 30px;
 }
 
@@ -159,7 +137,6 @@ body{
 }
 
 .card a{
-     /* a 默认是行内元素. 行内元素的很多边距不生效. 为了简单起见, 直接设为块级元素. */
      display: block;
      text-align: center;
      text-decoration: none;
@@ -179,25 +156,21 @@ body{
 
 </head>
 <body>
-    <!-- 导航栏 -->
     <div class="nav">
         <img src="icon/icon.jpg" alt="">
         <span>Yedchen's Blog</span>
-        <!-- 空白元素 实现占位 -->
         <div class="spacer"></div>
-        <a href="blog_list.html">主页</a>
-        <a href="blog_edit.html">写博客</a>
-        <a href="#">注销</a>
+<span>我的Github→</span>
+<a href="https://github.com/Yedchen?tab=repositories">
+  <img src="icon/GITHUBICON.jpg" alt="">
+</a>
     </div>
-    <!-- 这里的.container作为页面的版心 -->
     <div class="container">
-        <!-- 左侧个人信息 -->
         <div class="left">
-            <!-- 表示整个用户的信息区域 -->
             <div class="card">
                 <img src="icon/Ceylan.png" alt="">
                 <h3>Yedchen</h3>
-                <a href="#">yedchen.github.io</a>
+                <a href="https://yedchen.github.io/">原地跳转yedchen.github.io</a>
                 <div class="counter">
                     <span>Html</span>
                     <span>CSS</span>
@@ -208,40 +181,69 @@ body{
                 </div>
             </div>
         </div>
-        <!-- 右侧内容详情 -->
    <div class="right">     
-            <!-- .blog就对应表示一个博客 -->
             <div class="blog">
-                <!-- 博客标题 -->
                 <div class="title">
-                    我的第一篇作文
+                    这是什么地方?
                 </div>
-                <!-- 博客发布时间 -->
-                <div class="date">
-                    2022-05-22 15:34:00
-                </div>
-                <!-- 博客的摘要 -->
+
                 <div class="desc">
-谁素我我我我素素素素我素我素素是素谁我是我是素谁素我素谁我谁素我素我我我我我素素素是谁素我素素是素是谁是我是素谁素谁我谁我谁素我素素谁我我我素素素谁我素我素素是素是我是我是素谁素素我谁我谁素我素我我我我我素素素素我素我素素是素谁谁我素谁谁谁素是是我是我是是我谁是是素是素是素我是谁素是谁是素素是谁是谁是我是我是谁我谁素我素是我素谁素谁是是素谁是是素谁素谁是我谁素谁是谁是素素谁我谁素素我我谁我我我素是我素我素我素素谁素谁是是我是素我我谁谁谁我谁素素我我我我我我素是素是是素我素素谁我是谁是我是素我我谁我谁我谁素素素我是我我我素是我素谁素我素素谁我是我是我是素我素我是谁我谁素素我我谁我我我素是我素谁素我素素谁我是我是我是素我素谁是谁我谁素素我我谁我我我素是我素我素我素素谁素是是是我是素我我谁谁谁我谁素素素素是我我我素是素素我是
+这里是一个初建立的个人网页,没有什么特别的东西.
                 </div>
-                <a href="#">查看全文 &gt;&gt;</a>
             </div>
             <div class="blog">
-                <!-- 博客标题 -->
                 <div class="title">
-                    我的第二篇作文
+                    我是谁?
                 </div>
-                <!-- 博客发布时间 -->
-                <div class="date">
-                    2022-05-22 15:34:00
-                </div>
-                <!-- 博客的摘要 -->
-                <div class="desc">
-                    一草一木皆是情
-                    人生中最好的境界，来自于内心的丰盈。——题记
-               读《人间草木》，感受的是作者汪曾祺的草木情怀，更是他的诗意人生。《人间草木》是汪曾祺禁
 
+                <div class="desc">
+                                         一个还在学习的人
+<p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="text-align:center">
+<p>
 更新日志
+</p>
+<div class="date">
+2024-04-17 16:34:00
+</div>
+<p>
+Page Push
+</p>
+<div class="date">
+2024-05-04 02:15:00
+</div>
+<p>
+Resource Uploaded
+</p>
+<div class="date">
+2024-5-15 15:53:00
+</div>
+<p>
+Code Updated
+</p>
+</div>
                 </div>
     </div>
     </div>
